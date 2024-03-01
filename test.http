@@ -1,0 +1,137 @@
+### Register User API
+POST http://localhost:8000/api/users/
+Content-Type: application/json
+Accept: application/json
+
+{
+    "username" : "Samuel",
+    "password" : "rahasia",
+    "name" : "Samuel Andrey Aji Prasetya"
+}
+
+### Login User API
+POST http://localhost:8000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "username" : "Samuel",
+    "password" : "rahasia"
+}
+
+### Get Current User API
+GET http://localhost:8000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 6e451653-1988-45a6-9eb4-5d9daac45bc8
+
+
+### Update Current User API
+PATCH http://localhost:8000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 6e451653-1988-45a6-9eb4-5d9daac45bc8
+
+{
+    "name" : "Samuel Andrey"
+}
+
+### Logout User API
+DELETE http://localhost:8000/api/users/logout
+Content-Type: application/json
+Accept: application/json
+Authorization: 6e451653-1988-45a6-9eb4-5d9daac45bc8
+
+### Create Contact API
+POST http://localhost:8000/api/contacts
+Content-Type: application/json
+Accept: application/json
+Authorization: 6e451653-1988-45a6-9eb4-5d9daac45bc8
+
+{
+    "first_name" : "Susanto",
+    "last_name" : "Santoso",
+    "email" : "john@sam.com",
+    "phone" : "2345"
+}
+
+### GET Contact API
+GET http://localhost:8000/api/contacts/427
+Accept: application/json
+Authorization: 6e451653-1988-45a6-9eb4-5d9daac45bc8
+
+
+### Update Contact API
+PUT http://localhost:8000/api/contacts/427
+Content-Type: application/json
+Accept: application/json
+Authorization: 6e451653-1988-45a6-9eb4-5d9daac45bc8
+
+{
+    "first_name" : "Budi",
+    "last_name" : "Doe",
+    "email" : "john@sam.com",
+    "phone" : "2345"
+}
+
+
+### Delete Contact API #437
+DELETE http://localhost:8000/api/contacts/427
+Accept: application/json
+Authorization: 6e451653-1988-45a6-9eb4-5d9daac45bc8
+
+
+### Search Contact API
+GET http://localhost:8000/api/contacts?email=john
+Accept: application/json
+Authorization: 6e451653-1988-45a6-9eb4-5d9daac45bc8
+
+
+### Create Address API #432
+POST http://localhost:8000/api/contacts/432/addresses
+Accept: application/json
+Content-Type: application/json
+Authorization: 6e451653-1988-45a6-9eb4-5d9daac45bc8
+
+{
+    "street": "jalan jalan 123",
+    "city": "Jakarta",
+    "province": "DKI Jakarta",
+    "country": "Indonesia",
+    "postal_code": "111"
+}
+
+### Get Address API #27
+GET http://localhost:8000/api/contacts/432/addresses/27
+Accept: application/json
+Content-Type: application/json
+Authorization: 6e451653-1988-45a6-9eb4-5d9daac45bc8
+
+
+### Update Address API #27
+PUT http://localhost:8000/api/contacts/432/addresses/27
+Accept: application/json
+Content-Type: application/json
+Authorization: 6e451653-1988-45a6-9eb4-5d9daac45bc8
+
+{
+    "street": "Jalan Mawar Melati",
+    "city": "Jakarta",
+    "province": "DKI Jakarta",
+    "country": "Indonesia",
+    "postal_code": "123"
+}
+
+
+### Remove Address API #28
+DELETE http://localhost:8000/api/contacts/432/addresses/28
+Accept: application/json
+Content-Type: application/json
+Authorization: 6e451653-1988-45a6-9eb4-5d9daac45bc8
+
+
+### List Address API #432
+GET http://localhost:8000/api/contacts/432/addresses
+Accept: application/json
+Content-Type: application/json
+Authorization: 6e451653-1988-45a6-9eb4-5d9daac45bc8
